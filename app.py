@@ -138,7 +138,7 @@ if choice == "Dashboard":
             st.subheader("Gastos por Categoria")
             df_despesas = df_filtered[df_filtered['Tipo'] == 'Saída']
             if not df_despesas.empty:
-                fig_rosca = px.donut(
+                fig_rosca = px.pie(
                     df_despesas, 
                     values='Valor', 
                     names='Categoria', 
